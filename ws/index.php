@@ -31,11 +31,11 @@ Flight::route('PUT /etudiants/@id', function($id) {
     Flight::json(['message' => 'Étudiant modifié']);
 });
 
-Flight::route('DELETE /etudiants/@id', function($id) {
-    $db = getDB();
-    $stmt = $db->prepare("DELETE FROM etudiant WHERE id = ?");
-    $stmt->execute([$id]);
-    Flight::json(['message' => 'Étudiant supprimé']);
-});
+// Flight::route('DELETE /etudiants/@id', function($id) {
+//     $db = getDB();
+//     $stmt = $db->prepare("DELETE FROM etudiant WHERE id = ?");
+//     $stmt->execute([$id]);
+//     Flight::json(['message' => 'Étudiant supprimé']);
+// });
 
 Flight::start();
